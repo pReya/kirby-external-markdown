@@ -13,8 +13,6 @@ Kirby::plugin('preya/kirby-external-markdown', [
         $markdown = null;
         $ttl = intval($tag->ttl) ?? 360;
 
-        var_dump($ttl);
-
         if (isset($tag->value)) {
           $cache = kirby()->cache('preya.kirby-external-markdown');
           $cacheKey = hash('md5', $tag->value);
